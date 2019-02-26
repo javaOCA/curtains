@@ -1,11 +1,6 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <title>Welcome page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-    <body>
-        <h2>Hello user!</h2>
+<#import "parts/common.ftl" as c>
+
+<@c.page>
+    <div>Hello, user</div>
     <a href="/main">Main page</a>
-    </body>
-</html>
+</@c.page>
