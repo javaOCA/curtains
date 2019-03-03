@@ -20,6 +20,8 @@ public class User implements UserDetails {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+    private String email;
+    private String activateCode;
 
     public User() {}
 
@@ -90,5 +92,21 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActivateCode() {
+        return activateCode;
+    }
+
+    public void setActivateCode(String activateCode) {
+        this.activateCode = activateCode;
     }
 }
