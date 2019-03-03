@@ -12,6 +12,7 @@ public class Message {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
+    private String filename;
 
     public Message() {
     }
@@ -56,5 +57,13 @@ public class Message {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }
